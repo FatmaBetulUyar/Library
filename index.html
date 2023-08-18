@@ -1,13 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="library.js"></script>
+    <script src="index.js"></script>
 </head>
+
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <div class="header">
+            <div class="headerLeft">
+                <img src="./img/img1.png" alt="" srcset="">
+
+            </div>
+            <div class="headerRight">
+
+                <button class="newBook">New Book</button>
+            </div>
+
+        </div>
+        <div class="rigthSide">
+            <table class="informationTable">
+                <tr>
+                    <td>Toplam Kitap :</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Okunan Kitap :</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Toplam Yazar :</td>
+                    <td>9</td>
+                </tr>
+            </table>
+        </div>
+        <div class="content">
+           <!--  <div class="card">
+                <div class="cardLeft">
+                    <img class="bookImg" id="cardImg" src="./img/cd.png" alt="" srcset="">
+                    <div class="status"><button>okundu</button></div>
+                </div>
+                <div class="cardRigth">
+                    <div class="cardInfo"><img class="cardIcon" src="./img/book_icon.png" alt="" srcset="">
+                        <h4 class="title" id="cardTitle">Çizginin Dışındakiler</h4>
+                    </div>
+                    <div class="cardInfo"><img class="cardIcon" src="./img/poem.png" alt="" srcset="">
+                        <p class="author"  id="cardAuthor">Malcolm Gladwell</p>
+                    </div>
+                    <div class="cardInfo"><img class="cardIcon" src="./img/document.png" alt="" srcset="">
+                        <p class="page" id="cardPage">280 Sayfa</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="footer">
+            <h4>&copy; Copyright 2023</h4>
+        </div>
+        <div class="overlay" id="overlay">
+            <div class="popup">
+                <span class="popup-close" id="popup-close">&times;</span>
+                <h1>Yeni Kitap Ekle</h1>
+                <form id="commentform" class="comment-form">
+                    <div class="comment-form-title">
+                        <input id="title" placeholder="Title *" name="title" type="text" value="" pattern="^[^0-9]+$" size="30" maxlength="245" required>
+                        <label for="title" data-help="¿Are you 11 from Stranger Things?">Title</label>
+                      </div>
+                      <div class="comment-form-author">
+                        <input id="author" placeholder="Author *" name="author" type="text" value="" size="30" maxlength="245" required>
+                        <label for="author" data-help="A girl has no name- Arya Stark">Author</label>
+                      </div>
+                      <div class="comment-form-page">
+                        <input id="page" placeholder="Page *" name="page" type="number" value="" size="30" maxlength="100"  required>
+                        <label for="page" >Page</label>
+                      </div>
+                      <div class="comment-img-url">
+                        <input id="url" placeholder="Img Url *" name="url" type="url" value="" size="30" maxlength="200">
+                        <label for="url" data-help="Should start with http:// o https://">Img</label>
+                      </div>
+                      <div class="form-submit" id="formSubmit">
+                        <input name="submit" type="submit" id="submit" class="submit" value="Post Comment">
+                      </div>
+                </form>
+            </div>
+        </div>
+        
+      
+    </div>
 </body>
+
 </html>

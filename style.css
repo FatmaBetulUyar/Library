@@ -3,3 +3,456 @@ body, html {
     padding: 0;
     height: 100%;
   }
+  .container{
+    display: grid;
+    grid-template:  1fr 5fr 0.5fr / 8fr 2fr;
+    height:100%;
+    text-align: center;
+    border-color: aquamarine;
+}
+
+.header{
+    background-color:khaki;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.headerLeft > img{
+    width:35%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+.headerLeft{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+.headerRight{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.newBook{
+    width: 30%;
+    height: 30%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color:sandybrown;
+    color: white;
+    font-weight: bold;
+}
+.content{
+    display: grid;
+    grid-template-rows: repeat(3, 3fr);
+    grid-template-columns: repeat(3, 2fr);
+}
+
+.card{
+    background-color: white;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4%;
+    margin: 2%;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.cardIcon{
+    width: 15%;
+    max-height: 100px;
+    vertical-align: middle;
+}
+.cardInfo{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.cardLeft{
+    width: 30%;
+    background-color:aquamarine;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 5px;
+    padding: 8px;
+}
+.statusButton{
+    width: 100%;
+    height: 30%;
+    border: none;
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cardRigth{
+    width: 60%;
+    background-color:aquamarine;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 15px;
+    flex: 1;
+    padding: 21px;
+    border-radius: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.cardLeft > img{
+    width: 80%;
+    height: auto;
+    display: block;
+}
+
+.footer{
+    background-color:khaki;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: white;
+}
+
+.rigthSide{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color:khaki;
+    margin: 5%;
+    padding: 5%;
+    border-radius: 10px;
+}
+.informationTable{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+  
+
+/* Layout Stuff */
+.comment-section {
+    width: 100%;
+    max-width: 760px;
+    margin: 30px auto;
+}
+h1 {
+    padding: 15px;
+    margin: 0;
+}
+#commentform {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+}
+#commentform > [class^="comment-form"],
+#commentform > .form-submit {
+    position: relative;
+    min-height: 1px;
+    padding: 15px;
+    width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+            -ms-flex: 0 0 100%;
+                    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 600px) {
+    #commentform > .comment-form-title,
+    #commentform > .comment-form-author,
+    #commentform > .comment-form-page,
+    #commentform > .comment-img-url {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 50%;
+                -ms-flex: 0 0 50%;
+                        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+
+/* Form Stuff */
+#commentform input[type="text"], #commentform input[type="number"], #commentform input[type="url"], #commentform textarea {
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    padding: 24px 10px 12px;
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+input[type="text"], input[type="number"], input[type="url"], textarea {
+    background-color: #fff;
+    padding: 24px 10px 12px;
+    font-size: 16px;
+    font-size: 1rem;
+    width: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+:focus {
+    outline: 0;
+}
+input[type="text"]:focus, input[type="number"]:focus, input[type="url"]:focus, textarea:focus {
+    background-color: #fff;
+}
+
+
+/*Animations*/
+@-webkit-keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+@-moz-keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+@keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1.4em);
+        -moz-transform: translateY(-1.4em);
+        -ms-transform: translateY(-1.4em);
+        -o-transform: translateY(-1.4em);
+        transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Label styles */
+#commentform label {
+    padding: 5px 0;
+    font-size: 14px;
+    font-size: 0.75rem;
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 26px;
+    color: #8BC34A;
+    -webkit-animation: silo-fade 0.2s;
+    -moz-animation: silo-fade 0.2s;
+    animation: silo-fade 0.2s;
+    max-width: 80%;
+}
+#commentform input:focus + label,
+#commentform input[required]:valid + label,
+#commentform input:not(:placeholder-shown) + label,
+#commentform textarea:focus + label,
+#commentform textarea:valid + label,
+#commentform textarea:not(:placeholder-shown) + label {
+    display: block;
+}
+#commentform input:invalid,
+#commentform textarea:invalid {
+    border: 1px solid #b92326;
+    background-color: rgba(185, 35, 38, 0.25);
+}
+#commentform input:focus:invalid,
+#commentform textarea:focus:invalid {
+    background-color: transparent;
+    border: 1px solid #b92326;
+}
+#commentform input:invalid + label,
+#commentform textarea:invalid + label {
+    color: #b92326;
+}
+#commentform input:invalid + label,
+#commentform textarea:invalid + label {
+    color: #b92326;
+}
+#commentform input:focus:invalid + label:after,
+#commentform textarea:focus:invalid + label:after {
+    content: " (" attr(data-help) ")";
+    animation: silo-help 100s;
+}
+#commentform input:invalid + label:after,
+#commentform textarea:invalid + label:after {
+    content: " (" attr(data-help) ")";
+}
+#commentform input:valid,
+#commentform textarea:valid {
+    border: 1px solid #8BC34A;
+    background-color: rgba(139, 195, 74, 0.25);
+}
+#commentform input:focus:valid,
+#commentform textarea:focus:valid {
+    border: 1px solid #8BC34A;
+    background-color: transparent;
+}
+#commentform input:valid + label,
+#commentform textarea:valid + label {
+    color: #8BC34A;
+}
+#commentform input:placeholder-shown,
+#commentform textarea:placeholder-shown {
+    background-color: transparent;
+    border: 1px solid #d8d8d8;
+}
+#commentform input::placeholder,
+#commentform textarea::placeholder {
+    color: #d8d8d8;
+}
+#commentform input::-webkit-input-placeholder,
+#commentform textarea::-webkit-input-placeholder {
+    color: #d8d8d8;
+}
+#commentform input:-ms-input-placeholder,
+#commentform textarea:-ms-input-placeholder {
+    color: #d8d8d8;
+}
+#commentform input::-moz-placeholder,
+#commentform textarea::-moz-placeholder {
+    color: #d8d8d8;
+}
+#commentform input:focus::placeholder,
+#commentform textarea:focus::placeholder {
+    color: transparent;
+}
+#commentform input:focus::-webkit-input-placeholder,
+#commentform textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+#commentform input:focus:-ms-input-placeholder,
+#commentform textarea:focus:-ms-input-placeholder {
+    color: transparent;
+}
+#commentform input:focus::-moz-placeholder,
+#commentform textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+#commentform input[type="submit"] {
+    background-color: transparent;
+    border: 1px solid #8BC34A;
+    color: #8BC34A;
+    padding: 5px 15px;
+    font-size: 16px;
+    font-size: 1rem;
+    margin: 15px auto;
+    vertical-align: middle;
+    display: block;
+    cursor: pointer;
+}
+#commentform input[type="submit"]:hover {
+    background-color: rgba(139, 195, 74, 0.25);
+    border: 1px solid #8BC34A;
+}
