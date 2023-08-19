@@ -63,26 +63,26 @@
         <div class="overlay" id="overlay">
             <div class="popup">
                 <span class="popup-close" id="popup-close">&times;</span>
-                <h1>Yeni Kitap Ekle</h1>
+                <h1>Add New Book</h1>
                 <form id="commentform" class="comment-form">
                     <div class="comment-form-title">
                         <input id="title" placeholder="Title *" name="title" type="text" value="" pattern="^[^0-9]+$" size="30" maxlength="245" required>
-                        <label for="title" data-help="¿Are you 11 from Stranger Things?">Title</label>
+                        <label for="title" data-help="You have to fill title">Title</label>
                       </div>
                       <div class="comment-form-author">
                         <input id="author" placeholder="Author *" name="author" type="text" value="" size="30" maxlength="245" required>
-                        <label for="author" data-help="A girl has no name- Arya Stark">Author</label>
+                        <label for="author" data-help="You have to fill author">Author</label>
                       </div>
                       <div class="comment-form-page">
                         <input id="page" placeholder="Page *" name="page" type="number" value="" size="30" maxlength="100"  required>
                         <label for="page" >Page</label>
                       </div>
-                      <div class="comment-img-url">
-                        <input id="url" placeholder="Img Url *" name="url" type="url" value="" size="30" maxlength="200">
+                      <div class="comment-form-url">
+                        <input id="url" placeholder="Img Url " name="url" type="url" value="" size="30" maxlength="200" >
                         <label for="url" data-help="Should start with http:// o https://">Img</label>
                       </div>
                       <div class="form-submit" id="formSubmit">
-                        <input name="submit" type="submit" id="submit" class="submit" value="Post Comment">
+                        <input name="submit" type="submit" id="submit" class="submit" value="Save">
                       </div>
                 </form>
             </div>

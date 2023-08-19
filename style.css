@@ -217,12 +217,12 @@ h1 {
     #commentform > .comment-form-title,
     #commentform > .comment-form-author,
     #commentform > .comment-form-page,
-    #commentform > .comment-img-url {
+    #commentform > .comment-form-url {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 50%;
-                -ms-flex: 0 0 50%;
-                        flex: 0 0 50%;
-        max-width: 50%;
+                -ms-flex: 0 0 70%;
+                        flex: 0 0 90%;
+        max-width: 100%;
     }
 }
 

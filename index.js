@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const authorInput = document.getElementById("author");
   const pageInput = document.getElementById("page");
   const btnNewBook = document.querySelector(".newBook");
-  const form = document.querySelector(".comment-form");
   const overlay = document.getElementById("overlay");
   const overlayResult = document.getElementById("overlayResult");
   const closePopupButton = document.getElementById("popup-close");
